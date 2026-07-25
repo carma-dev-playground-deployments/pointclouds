@@ -1,4 +1,4 @@
-import{g as i,p as o}from"./point-cloud-assets-CE4ZX0At.js";const p=[31,32,33],r=new Map,m=n=>{if(!p.includes(n))throw new RangeError(`GCG2016 is not defined for ETRS89 / UTM zone ${n}; expected zone 31, 32, or 33`)},d=n=>{m(n);const e=r.get(n);if(e)return e;const t=o("EPSG:4326",`+proj=utm +zone=${n} +ellps=GRS80 +units=m +no_defs`);return r.set(n,t),t},u=({east:n,north:e,zone:t})=>{const[s,a]=d(t).inverse([n,e]);return[s,a]},y=n=>{const[e,t]=u(n);return i(e,t)},c=async(n,e)=>e+await y(n),h=`{
+import{g as i,p as o}from"./point-cloud-assets-BLQAWOmC.js";const p=[31,32,33],r=new Map,m=n=>{if(!p.includes(n))throw new RangeError(`GCG2016 is not defined for ETRS89 / UTM zone ${n}; expected zone 31, 32, or 33`)},d=n=>{m(n);const e=r.get(n);if(e)return e;const t=o("EPSG:4326",`+proj=utm +zone=${n} +ellps=GRS80 +units=m +no_defs`);return r.set(n,t),t},u=({east:n,north:e,zone:t})=>{const[s,a]=d(t).inverse([n,e]);return[s,a]},y=n=>{const[e,t]=u(n);return i(e,t)},c=async(n,e)=>e+await y(n),h=`{
   "type": "FeatureCollection",
   "bbox": [
     7.1318586563,
