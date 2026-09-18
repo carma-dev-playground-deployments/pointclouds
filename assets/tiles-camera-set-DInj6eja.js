@@ -1,0 +1,1 @@
+const C=(a,r)=>r,d=(a,r)=>{let e=r;return a.setCamera(e),{update:(t,s,m)=>{t!==e&&(a.deleteCamera(e),e=t,a.setCamera(e)),a.setResolution(e,Math.max(1,s),Math.max(1,m))},dispose(){a.deleteCamera(e)}}};export{d as c,C as r};
